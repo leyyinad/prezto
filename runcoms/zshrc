@@ -15,3 +15,5 @@ fi
 # Load fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
+# gulp completion
+eval "$(gulp --completion=zsh)"
