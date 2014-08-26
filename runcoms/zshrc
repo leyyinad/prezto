@@ -12,3 +12,6 @@ fi
 
 # Customize to your needs...
 
+# Load fzf
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+
