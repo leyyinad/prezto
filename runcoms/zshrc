@@ -19,3 +19,8 @@ fi
 if which gulp &> /dev/null; then
   eval "$(gulp --completion=zsh)"
 fi
+
+# grunt completion
+if which grunt &> /dev/null; then
+  eval "$(grunt --completion=zsh)"
+fi
