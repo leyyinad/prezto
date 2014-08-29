@@ -24,3 +24,6 @@ fi
 if which grunt &> /dev/null; then
   eval "$(grunt --completion=zsh)"
 fi
+
+# More aliases
+alias gff="git-flow"
