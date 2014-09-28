@@ -11,3 +11,7 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
 fi
 
 export RBENV_ROOT=/usr/local/var/rbenv
+
+# see http://dougblack.io/words/zsh-vi-mode.html
+export KEYTIMEOUT=1
+
