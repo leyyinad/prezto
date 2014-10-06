@@ -12,6 +12,12 @@ fi
 
 # Customize to your needs...
 
+# Custom key bindings
+bindkey "\033[1;5D" backward-word
+bindkey "\033[1;5C" forward-word
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+
 # Load fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
