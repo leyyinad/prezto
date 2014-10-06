@@ -27,3 +27,7 @@ fi
 
 # More aliases
 alias gff="git-flow"
+
+# Fix run-help
+unalias run-help
+autoload run-help
