@@ -35,5 +35,7 @@ fi
 alias gff="git-flow"
 
 # Fix run-help
-unalias run-help
+case $(type run-help) in
+  *alias*) unalias run-help
+esac
 autoload run-help
