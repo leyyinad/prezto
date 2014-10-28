@@ -39,3 +39,5 @@ case $(type run-help) in
   *alias*) unalias run-help
 esac
 autoload run-help
+
+source /Users/joshua/.iterm2_shell_integration.zsh
