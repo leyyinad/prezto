@@ -41,9 +41,9 @@ esac
 autoload run-help
 
 # boot2docker
-if which boot2docker &> /dev/null; then
-  SCRIPT=`boot2docker shellinit` &>/dev/null
-  eval $SCRIPT
-fi
+#if which boot2docker &> /dev/null; then
+#  SCRIPT=`boot2docker shellinit` &>/dev/null
+#  eval $SCRIPT
+#fi
 
 source /Users/joshua/.iterm2_shell_integration.zsh
