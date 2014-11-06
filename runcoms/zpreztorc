@@ -41,11 +41,14 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'homebrew' \
   'rsync' \
+  'rails' \
+  'ruby' \
   'git' \
   'gpg' \
   'node' \
   'archive' \
-  'tmux'
+  'tmux' \
+  'docker'
 
 #
 # Editor
