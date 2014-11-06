@@ -40,4 +40,6 @@ case $(type run-help) in
 esac
 autoload run-help
 
-source /Users/joshua/.iterm2_shell_integration.zsh
+if [[ -f ~/.iterm2_shell_integration ]]; then
+  source ~/.iterm2_shell_integration.zsh
+fi
