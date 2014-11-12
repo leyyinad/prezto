@@ -20,9 +20,16 @@ fi
 #export EDITOR='nano'
 #export VISUAL='nano'
 #export PAGER='less'
-export EDITOR='vim'
-export VISUAL='vim'
-export PAGER='less'
+
+if [[ -z $SSH_CLIENT ]]; then
+  export EDITOR='mvim'
+  export VISUAL='mvim'
+  export PAGER='less'
+else
+  export EDITOR='vim'
+  export VISUAL='vim'
+  export PAGER='less'
+fi
 
 #
 # Language
