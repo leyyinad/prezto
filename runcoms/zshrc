@@ -40,6 +40,10 @@ case $(type run-help) in
 esac
 autoload run-help
 
+if which hhvm &> /dev/null; then
+  alias composer='hhvm /usr/local/bin/composer' 
+fi
+
 if [[ -f ~/.iterm2_shell_integration ]]; then
   source ~/.iterm2_shell_integration.zsh
 fi
