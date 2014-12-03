@@ -5,7 +5,7 @@
 
 # boot2docker
 if which boot2docker &> /dev/null; then
-  $(boot2docker shellinit 2>/dev/null)
+    $(boot2docker shellinit 2>/dev/null) &
 fi
 
 function docker-ip() {
