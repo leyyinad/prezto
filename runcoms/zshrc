@@ -36,9 +36,14 @@ alias gff="git-flow"
 
 # Fix run-help
 case $(type run-help) in
-  *alias*) unalias run-help
+  *alias*)
+    unalias run-help
+    autoload run-help
 esac
-autoload run-help
+
+if [[ -d /usr/local/share/zsh/help ]]; then
+  HELPDIR=/usr/local/share/zsh/help
+fi
 
 if which hhvm &> /dev/null; then
   alias composer='hhvm /usr/local/bin/composer' 
