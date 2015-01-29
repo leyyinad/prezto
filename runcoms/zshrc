@@ -21,6 +21,9 @@ bindkey "^E" end-of-line
 # Load fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
+# Load autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 # gulp completion
 if which gulp &> /dev/null; then
   eval "$(gulp --completion=zsh)"
