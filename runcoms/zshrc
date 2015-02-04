@@ -18,6 +18,9 @@ bindkey "\033[1;5C" forward-word
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 
+# set option INTERACTIVE_COMMENTS
+set -k
+
 # Load fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
