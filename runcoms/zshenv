@@ -12,6 +12,10 @@ fi
 
 export RBENV_ROOT=/usr/local/var/rbenv
 
+if which brew &> /dev/null; then
+  export BYOBU_PREFIX=$(brew --prefix)
+fi
+
 # see http://dougblack.io/words/zsh-vi-mode.html
 export KEYTIMEOUT=1
 
