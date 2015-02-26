@@ -47,7 +47,8 @@ zstyle ':prezto:load' pmodule \
   'node' \
   'archive' \
   'tmux' \
-  'docker'
+  'docker' \
+  'httpie'
 
 #
 # Editor
