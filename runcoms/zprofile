@@ -21,7 +21,7 @@ fi
 #export VISUAL='nano'
 #export PAGER='less'
 
-if [[ -z $SSH_CLIENT ]]; then
+if which mvim &> /dev/null; then
   export EDITOR='mvim'
   export VISUAL='mvim'
   export PAGER='less'
