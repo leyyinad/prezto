@@ -63,4 +63,4 @@ if [[ -f ~/.iterm2_shell_integration ]]; then
   source ~/.iterm2_shell_integration.zsh
 fi
 
-alias fuck='$(thefuck $(fc -ln -1))'
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
