@@ -20,3 +20,9 @@ fi
 export KEYTIMEOUT=1
 
 export MONO_GAC_PREFIX="/usr/local"
+
+# stderred
+
+if [[ -f /Users/danielhaus/Projects/Tools/stderred/build/libstderred.dylib ]]; then
+  export DYLD_INSERT_LIBRARIES="/Users/danielhaus/Projects/Tools/stderred/build/libstderred.dylib${DYLD_INSERT_LIBRARIES:+:$DYLD_INSERT_LIBRARIES}"
+fi
