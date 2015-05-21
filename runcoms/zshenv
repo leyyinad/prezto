@@ -22,10 +22,5 @@ export KEYTIMEOUT=1
 export MONO_GAC_PREFIX="/usr/local"
 
 # stderred
-
-if [[ -f /usr/local/lib/libstderred.dylib ]]; then
-  export DYLD_INSERT_LIBRARIES="/usr/local/lib/libstderred.dylib${DYLD_INSERT_LIBRARIES:+:$DYLD_INSERT_LIBRARIES}"
-  #export STDERRED_BLACKLIST="^(bash|test.*)$"
-  export STDERRED_BLACKLIST="^(fzf|fzf-tmux)$"
-  export STDERRED_ESC_CODE=`echo -e "\x1b[38;5;160m\x1b[48;5;52m"`
-fi
+export STDERRED_ESC_CODE=`echo -e "\x1b[38;5;160m\x1b[48;5;52m"`
+alias stderred=DYLD_INSERT_LIBRARIES="/usr/local/lib/libstderred.dylib${DYLD_INSERT_LIBRARIES:+:$DYLD_INSERT_LIBRARIES}"
