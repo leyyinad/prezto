@@ -27,3 +27,6 @@ alias stderred=DYLD_INSERT_LIBRARIES="/usr/local/lib/libstderred.dylib${DYLD_INS
 
 # make ansible not use cowsay
 export ANSIBLE_NOCOWS=1
+
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
