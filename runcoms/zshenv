@@ -32,3 +32,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 BASE16_THEME="isotope"
+
+# haxelib
+HAXE_STD_PATH="/usr/local/lib/haxe/std"
