@@ -35,3 +35,8 @@ BASE16_THEME="isotope"
 
 # haxelib
 HAXE_STD_PATH="/usr/local/lib/haxe/std"
+
+# private env settings
+if [[ -s "${ZDOTDIR:-$HOME}/.zshenv_private" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshenv_private" 
+fi
