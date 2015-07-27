@@ -63,4 +63,6 @@ if [[ -f ~/.iterm2_shell_integration ]]; then
   source ~/.iterm2_shell_integration.zsh
 fi
 
-eval "$(thefuck-alias)"
+if which thefuck-alias &> /dev/null; then
+    eval "$(thefuck-alias)"
+fi
