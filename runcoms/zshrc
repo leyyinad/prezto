@@ -64,5 +64,5 @@ if [[ -f ~/.iterm2_shell_integration ]]; then
 fi
 
 if which thefuck-alias &> /dev/null; then
-    eval "$(thefuck-alias)"
+    eval "$(thefuck --alias)"
 fi
