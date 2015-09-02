@@ -37,3 +37,4 @@ BASE16_THEME="isotope"
 if [[ -s "${ZDOTDIR:-$HOME}/.zshenv_private" ]]; then
   source "${ZDOTDIR:-$HOME}/.zshenv_private" 
 fi
+
