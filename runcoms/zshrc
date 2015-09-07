@@ -55,10 +55,6 @@ if [[ -d /usr/local/share/zsh/help ]]; then
   HELPDIR=/usr/local/share/zsh/help
 fi
 
-if which hhvm &> /dev/null; then
-  alias composer='hhvm /usr/local/bin/composer' 
-fi
-
 if [[ -f ~/.iterm2_shell_integration ]]; then
   source ~/.iterm2_shell_integration.zsh
 fi
