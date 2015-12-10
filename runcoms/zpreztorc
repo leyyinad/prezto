@@ -47,6 +47,7 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'tmux' \
   'docker' \
+  'haxe' \
   'httpie' \
   'base16' \
   'prompt'
