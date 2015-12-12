@@ -1,7 +1,8 @@
 alias hx="haxe"
-alias hxr="haxelib run"
+alias hxl="haxelib"
+alias hxr="hxl run"
 
-alias munit="hxr run munit"
+alias munit="hxr munit"
 alias mu="munit"
 alias mt="munit test -result-exit-code"
 
