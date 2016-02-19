@@ -11,4 +11,5 @@ alias swarm="docker-swarm"
 
 alias d="docker"
 alias dm="docker-machine"
-alias dc="docker-machine"
+alias dc="docker-compose"
+alias ds="docker-swarm"
