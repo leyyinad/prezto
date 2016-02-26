@@ -63,6 +63,13 @@ if which thefuck-alias &> /dev/null; then
     eval "$(thefuck --alias)"
 fi
 
+function swap() {
+    local TMPFILE=tmp.$$
+    mv "$1" $TMPFILE
+    mv "$2" "$1"
+    mv $TMPFILE "$2"
+}
+
 # man page colors
 export LESS_TERMCAP_mb=$'\E[01;31m'      # Begins blinking.
 export LESS_TERMCAP_md=$'\E[1;93m'       # Begins bold.
