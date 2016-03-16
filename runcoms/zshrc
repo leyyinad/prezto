@@ -21,6 +21,9 @@ bindkey "^E" end-of-line
 # set option INTERACTIVE_COMMENTS
 set -k
 
+setopt NO_NOMATCH
+#setopt NO_EXTENDED_GLOB
+
 # Load fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
