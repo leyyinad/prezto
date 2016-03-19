@@ -152,10 +152,18 @@ function prompt_status {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+# Show currently active docker machine, if not default
+function prompt_docker_machine {
+  if [[ -n "${DOCKER_MACHINE_NAME//default/}" ]]; then
+    prompt_segment 33 153 "${DOCKER_MACHINE_NAME//.*/}"
+  fi
+}
+
 ## Main prompt
 function build_left_prompt {
   RETVAL=$?
   prompt_status
+  prompt_docker_machine
   prompt_virtualenv
   prompt_rbenv
   prompt_context
@@ -254,4 +262,3 @@ function prompt_leyyinad_setup {
 }
 
 prompt_leyyinad_setup "$@"
-
