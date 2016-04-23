@@ -45,6 +45,7 @@ fi
 
 # More aliases
 alias gff="git-flow"
+alias mux=tmuxinator
 
 # Fix run-help
 case $(type run-help) in
