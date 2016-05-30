@@ -19,11 +19,7 @@ fi
 # see http://dougblack.io/words/zsh-vi-mode.html
 export KEYTIMEOUT=1
 
-export MONO_GAC_PREFIX="/usr/local"
-
-# stderred
-export STDERRED_ESC_CODE=`echo -e "\x1b[38;5;160m\x1b[48;5;52m"`
-alias stderred=DYLD_INSERT_LIBRARIES="/usr/local/lib/libstderred.dylib${DYLD_INSERT_LIBRARIES:+:$DYLD_INSERT_LIBRARIES}"
+export MONO_GAC_PREFIX="/usr/local:$MONO_GAC_PREFIX"
 
 # make ansible not use cowsay
 export ANSIBLE_NOCOWS=1
