@@ -1,0 +1,4 @@
+  zplug "tcnksm/docker-alias", use:zshrc
+
+  zplug "Valiev/almostontop"
+  zplug "mollifier/cd-gitroot", as:command

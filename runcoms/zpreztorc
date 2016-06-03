@@ -50,7 +50,8 @@ zstyle ':prezto:load' pmodule \
   'haxe' \
   'httpie' \
   'base16' \
-  'prompt'
+  'prompt' \
+  'zplug'
 
 #
 # Autosuggestions
