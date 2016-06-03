@@ -1,4 +1,9 @@
-  zplug "tcnksm/docker-alias", use:zshrc
+zplug "tcnksm/docker-alias", use:zshrc
+zplug "sdurrheimer/docker-compose-zsh-completion"
 
-  zplug "Valiev/almostontop"
-  zplug "mollifier/cd-gitroot", as:command
+zplug "Valiev/almostontop"
+
+zplug "mollifier/cd-gitroot"
+fpath=($fpath $ZPLUG_HOME/repos/mollifier/cd-gitroot/(N-/))
+
+zplug "arzzen/calc.plugin.zsh"
