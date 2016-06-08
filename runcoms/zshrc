@@ -20,7 +20,10 @@ bindkey "^E" end-of-line
 bindkey "^H" run-help
 
 # Pick item but stay in the menu
-bindkey -M menuselect "+" accept-and-menu-complete
+# bindkey -M menuselect "+" accept-and-menu-complete
+#
+# Figure out what this does
+# bindkey -M menuselect "/" accept-and-infer-next-history
 
 # set option INTERACTIVE_COMMENTS
 set -k
