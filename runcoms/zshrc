@@ -19,6 +19,9 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^H" run-help
 
+# Pick item but stay in the menu
+bindkey -M menuselect "+" accept-and-menu-complete
+
 # set option INTERACTIVE_COMMENTS
 set -k
 
