@@ -17,11 +17,15 @@ bindkey "\033[1;5D" backward-word
 bindkey "\033[1;5C" forward-word
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
+bindkey "^H" run-help
 
 # set option INTERACTIVE_COMMENTS
 set -k
 
-setopt NO_NOMATCH
+setopt no_nomatch
+
+# Share history file amongst all Zsh sessions, ignoring dupes
+setopt append_history share_history histignorealldups
 
 # Load fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
@@ -52,7 +56,8 @@ alias cdu="cd-gitroot"
 case $(type run-help) in
   *alias*)
     unalias run-help
-    autoload run-help
+    autoload -U run-help
+    autoload run-help-git
 esac
 
 if [[ -d /usr/local/share/zsh/help ]]; then
