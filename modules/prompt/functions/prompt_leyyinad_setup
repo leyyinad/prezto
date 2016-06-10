@@ -17,6 +17,8 @@
 #    "exit_success": { "fg": "white", "bg": "darkestgreen" },
 #    "environment": { "fg": "white", "bg": "darkestgreen" }
 
+# debug with "print -P"
+
 # 1 superuser ?
 # 2 user@host (ssh) ?
 # 3 branch ?
@@ -25,6 +27,7 @@
 # 6 rbenv ?
 # 7 virtualenv ?
 # 8 nodeenv ?
+# 9 docker-compose project
 
 start_time=$SECONDS
 function prompt_leyyinad_preexec {
@@ -159,11 +162,23 @@ function prompt_docker_machine {
   fi
 }
 
+# Show currently active docker compose project, if any
+function prompt_docker_compose {
+  if [[ -n "$COMPOSE_PROJECT_NAME" ]]; then
+    if [[ -n "$X_COMPOSE_PROFILE" ]]; then
+      prompt_segment 45 25 "${COMPOSE_PROJECT_NAME//.*/} ($X_COMPOSE_PROFILE)"
+    else
+      prompt_segment 45 25 "${COMPOSE_PROJECT_NAME//.*/}"
+    fi
+  fi
+}
+
 ## Main prompt
 function build_left_prompt {
   RETVAL=$?
   prompt_status
   prompt_docker_machine
+  prompt_docker_compose
   prompt_virtualenv
   prompt_rbenv
   prompt_context
