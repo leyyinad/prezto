@@ -1,0 +1,3 @@
+dme () {
+  eval $(docker-machine env "$@")
+}

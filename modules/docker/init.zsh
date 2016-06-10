@@ -1,18 +1,10 @@
-#
-# Provides some shortcuts and helpers for docker
-#
+# Return if requirements are not found.
+if (( ! $+commands[docker] )); then
+  return 1
+fi
 
-alias machine="docker-machine"
-alias compose="docker-compose"
-alias swarm="docker-swarm"
+# Load dependencies.
+pmodload 'helper'
 
-alias d="docker"
-alias dm="docker-machine"
-alias dc="docker-compose"
-alias ds="docker-swarm"
-alias de="docker exec -t -i"
-
-alias dcr="dc restart"
-alias dcb="dc build"
-alias dcu="dc up --build -d && dc logs -f"
-alias dcl="dc logs -f"
+# Source module files.
+source "${0:h}/alias.zsh"

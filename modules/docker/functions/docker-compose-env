@@ -1,0 +1,30 @@
+docker-compose-env () {
+  local PROJECT_DIR=`pwd`
+  X_COMPOSE_PROFILE=""
+
+  if [ "$0" = "unset" ]; then
+    COMPOSE_PROJECT_NAME=""
+    COMPOSE_FILE=""
+  elif [ ! -f $PROJECT_DIR/docker-compose.yml ]; then
+    (>&2 echo "Error: docker-compose.yml doesn't exist in this directory")
+    return
+  else
+    COMPOSE_PROJECT_NAME=`basename $PROJECT_DIR`
+
+    if [ -n "$1" ]; then
+      if [ -f "$PROJECT_DIR/docker-compose.$1.yml" ]; then
+        COMPOSE_FILE="$PROJECT_DIR/docker-compose.yml:$PROJECT_DIR/docker-compose.$1.yml"
+        X_COMPOSE_PROFILE="$1"
+      else
+        (>&2 echo "Error: docker-compose.$1.yml doesn't exist in the project directory")
+        return
+      fi
+    else
+      COMPOSE_FILE=""
+    fi
+  fi
+
+  echo "export COMPOSE_PROJECT_NAME=\"$COMPOSE_PROJECT_NAME\""
+  echo "export COMPOSE_FILE=\"$COMPOSE_FILE\""
+  echo "export X_COMPOSE_PROFILE=\"X_COMPOSE_PROFILE\""
+}
