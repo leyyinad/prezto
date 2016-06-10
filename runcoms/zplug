@@ -7,3 +7,5 @@ zplug "mollifier/cd-gitroot"
 fpath=($fpath $ZPLUG_HOME/repos/mollifier/cd-gitroot/(N-/))
 
 zplug "arzzen/calc.plugin.zsh"
+
+zplug "psprint/zsh-navigation-tools"
