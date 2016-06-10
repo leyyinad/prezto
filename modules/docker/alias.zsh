@@ -16,5 +16,3 @@ alias dcr="dc restart"
 alias dcb="dc build"
 alias dcu="dc up --build -d && dc logs -f"
 alias dcl="dc logs -f"
-
-alias dce="docker-compose-env"

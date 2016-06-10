@@ -1,0 +1,3 @@
+dce () {
+  eval $(docker-compose-env "$@")
+}

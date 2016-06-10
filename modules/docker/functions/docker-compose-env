@@ -1,13 +1,14 @@
 docker-compose-env () {
   local PROJECT_DIR=`pwd`
-  X_COMPOSE_PROFILE=""
+  local COMPOSE_PROJECT_NAME=""
+  local COMPOSE_FILE=""
+  local X_COMPOSE_PROFILE=""
 
-  if [ "$0" = "unset" ]; then
-    COMPOSE_PROJECT_NAME=""
-    COMPOSE_FILE=""
-  elif [ ! -f $PROJECT_DIR/docker-compose.yml ]; then
-    (>&2 echo "Error: docker-compose.yml doesn't exist in this directory")
-    return
+  if [ ! -f $PROJECT_DIR/docker-compose.yml ]; then
+    if [ "$0" != "unset" ]; then
+      (>&2 echo "Error: docker-compose.yml doesn't exist in this directory")
+      return
+    fi
   else
     COMPOSE_PROJECT_NAME=`basename $PROJECT_DIR`
 
@@ -19,8 +20,6 @@ docker-compose-env () {
         (>&2 echo "Error: docker-compose.$1.yml doesn't exist in the project directory")
         return
       fi
-    else
-      COMPOSE_FILE=""
     fi
   fi
 

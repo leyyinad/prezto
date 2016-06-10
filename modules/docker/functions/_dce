@@ -1,0 +1,7 @@
+#compdef dce
+#autoload
+
+declare -a dce_envs_cmd
+dce_envs_cmd=($(ls -1 docker-compose.*.yml | grep -v override | awk -F. '{ print $2 }' ))
+_describe 'environments' dce_envs_cmd
+
