@@ -1,3 +1,5 @@
-dme () {
-  eval $(docker-machine env "$@")
-}
+#
+
+eval $(docker-machine env "$@")
+
+return 0

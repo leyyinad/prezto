@@ -1,3 +1,5 @@
-dce () {
-  eval $(docker-compose-env "$@")
-}
+#
+
+eval $(docker-compose-env "$@")
+
+return 0

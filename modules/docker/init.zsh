@@ -1,7 +1,7 @@
 # Return if requirements are not found.
-if (( ! $+commands[docker] )); then
-  return 1
-fi
+# if (( ! $+commands[docker] )); then
+#   return 1
+# fi
 
 # Load dependencies.
 pmodload 'helper'
