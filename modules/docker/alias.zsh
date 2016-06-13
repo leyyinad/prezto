@@ -16,3 +16,5 @@ alias dcr="dc restart"
 alias dcb="dc build"
 alias dcu="dc up --build -d && dc logs -f"
 alias dcl="dc logs -f"
+
+alias dockviz="docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
