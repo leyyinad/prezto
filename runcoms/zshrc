@@ -57,6 +57,7 @@ fi
 alias gff="git-flow"
 alias mux=tmuxinator
 alias cdu="cd-gitroot"
+alias pt="pt --global-gitignore"
 
 # Fix run-help
 case $(type run-help) in
