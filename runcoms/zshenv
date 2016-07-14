@@ -31,7 +31,8 @@ export GOPATH=$HOME/go
 export PATH=/Library/Frameworks/Mono.framework/Commands:$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # BASE16_THEME="3024"
-BASE16_THEME="ir-black"
+# BASE16_THEME="ir-black"
+BASE16_THEME="default-light"
 
 # private env settings
 if [[ -s "${ZDOTDIR:-$HOME}/.zshenv_private" ]]; then
