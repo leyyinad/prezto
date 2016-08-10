@@ -28,7 +28,7 @@ export MONO_GAC_PREFIX="/usr/local:$MONO_GAC_PREFIX"
 export ANSIBLE_NOCOWS=1
 
 export GOPATH=$HOME/go
-export PATH=/Library/Frameworks/Mono.framework/Commands:$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
+export PATH=/Library/Frameworks/Mono.framework/Commands:$HOME/.npm/bin:$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # BASE16_THEME="3024"
 # BASE16_THEME="ir-black"
