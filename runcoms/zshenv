@@ -27,7 +27,8 @@ export MONO_GAC_PREFIX="/usr/local:$MONO_GAC_PREFIX"
 # make ansible not use cowsay
 export ANSIBLE_NOCOWS=1
 
-export GOPATH=$HOME/go
+export GOPATH="$HOME/go"
+export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 export PATH=/Library/Frameworks/Mono.framework/Commands:$HOME/.npm/bin:$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # BASE16_THEME="3024"
