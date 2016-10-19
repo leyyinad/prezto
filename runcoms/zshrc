@@ -19,6 +19,9 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^H" run-help
 bindkey "^ " autosuggest-accept
+# bindkey "^^M" autosuggest-execute
+bindkey -M vicmd "q" push-line
+bindkey -M viins ' ' magic-space
 
 # Pick item but stay in the menu
 # bindkey -M menuselect "+" accept-and-menu-complete
