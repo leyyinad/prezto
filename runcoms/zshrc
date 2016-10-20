@@ -19,7 +19,7 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^H" run-help
 bindkey "^ " autosuggest-accept
-# bindkey "^^M" autosuggest-execute
+bindkey "^P" autosuggest-execute
 bindkey -M vicmd "q" push-line
 bindkey -M viins ' ' magic-space
 
