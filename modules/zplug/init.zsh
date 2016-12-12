@@ -10,5 +10,5 @@ if [[ -f $ZPLUG_HOME/init.zsh ]]; then
   fi
 
   # Then, source plugins and add commands to $PATH
-  zplug load
+  zplug load >/dev/null
 fi
