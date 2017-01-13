@@ -113,7 +113,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 #zstyle ':prezto:module:prompt' theme 'sorin'
-zstyle ':prezto:module:prompt' theme 'leyyinad'
+zstyle ':prezto:module:prompt' theme 'pure'
 
 #
 # Ruby
